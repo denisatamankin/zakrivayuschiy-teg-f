@@ -1,1 +1,24 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --font-main: 'Inter-Variable', Arial, sans-serif;
+    --font-accent: 'PressStart2P-Regular', Impact, fantasy;
+    --fontSize-main-text: 18px;
+    --fontSize-accent-text: 14px;
+    --fontSize-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --fontSize-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --fontWeight-main-text: 400;
+    --fontWeight-title: 700;
+    --color-background: #fff;
+    --color-accent: #000;
+    --gradient-background: repeating-linear-gradient(to right,#d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px), linear-gradient(#e7e7e7 0 0,01%, #e7e7e7, #1a1a1a);
+
+
+
+
+
+
+
+
+
+}

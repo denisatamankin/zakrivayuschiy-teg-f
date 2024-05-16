@@ -17,4 +17,110 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 100px;
+  font-family: var(--font-main), sans-serif;
+  font-size: var(--fontSize-main-text);
+  font-variation-settings: "wght" var(--fontWeight-main-text);
+  color: var(--color-accent);
+  background-color: var(--color-background);
+  background-image: var(--gradient-background);
+  background-size: cover;
+  background-attachment: fixed;   
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background);
+  width: 100vw;
+  max-width: 700px;
+  font-family: var(--font-accent), fantasy;
+
+}
+
+.header__title {
+  margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+  font-size: var(--fontSize-title);
+  text-transform: uppercase; 
+}
+
+.header__subtitle {
+  margin-block-start: 20px;
+  font-size: var(--fontSize-subtitle);
+  text-transform: uppercase; 
+}
+
+.header__theme-menu {
+  margin-block: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: var(--fontSize-accent-text);
+  text-transform: uppercase;
+}
+
+.theme-menu__button:hover {
+  filter: opacity(0.6);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button:focus-visible {
+  filter: opacity(0.6);
+  transition: filter 0.3s ease;
+}
+
+.theme-menu__button:disabled {
+  filter: opacity(0.6);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+}
+
+.theme-menu__button::before {
+  content: '▶';
+  position: absolute;
+  display: block;
+  inset-inline-start: -20px;
+  inline-size: 0;
+  background-color: currentColor;
+  transform: scaleX(0);
+}
+
+.theme-menu__button:disabled::before {
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+.theme-menu__button::after {
+  content: '';
+  position: absolute;
+  display: block;
+  inline-size: 100%;
+  block-size: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+  transition: transform 0.3s ease;
+}
+
+
