@@ -36,10 +36,9 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--color-background);
-  width: 100vw;
-  max-width: 700px;
+  inline-size: 100vw;
+  max-inline-size: 700px;
   font-family: var(--font-accent), fantasy;
-
 }
 
 .header__title {
@@ -97,10 +96,11 @@
   content: '▶';
   position: absolute;
   display: block;
-  inset-inline-start: -20px;
+  inset-inline-start: -25px;
   inline-size: 0;
   background-color: currentColor;
   transform: scaleX(0);
+  animation: moving-arrow 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:disabled::before {
@@ -118,9 +118,168 @@
   transform: scaleX(0);
 }
 
+.theme-menu__button:focus::after {
+  outline: none;
+  filter: opacity(0.6);
+}
+
 .theme-menu__button:focus-visible::after {
   transform: scaleX(1);
+  transform-origin: left;
   transition: transform 0.3s ease;
 }
 
+.main__card {
+  margin-block-start: 100px;
+  inline-size: 100vw;
+  max-inline-size: 700px;
+  background-color: var(--color-background);
+}
+
+.main__card-title {
+  padding: 3px 0 3px 10px;
+  font-size: var(--fontSize-main-text);
+  font-variation-settings: "wght" var(--fontWeight-title);
+  border: solid 2px var(--color-accent);
+}
+
+.main__card-photo {
+  position: relative;
+}
+
+.main__card-watermark {
+  position: absolute;
+  inset-inline-end: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
+  inset-block-start: 25px;
+  mix-blend-mode: hard-light;
+  opacity: 50%;
+  font-family: var(--font-accent), sans-serif;
+  font-size: var(--fontSize-accent-text);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-shadow:
+    -1px 0 var(--color-background), 
+    0 1px var(--color-background), 
+    1px 0 var(--color-background), 
+    0 -1px var(--color-background);
+}
+
+@supports((text-stroke: 1px var(--color-background)) or (-webkit-text-stroke: 1px var(--color-background))) {
+  .main__card-watermark {
+      -webkit-text-stroke: 1px var(--color-background);
+      text-stroke: 1px var(--color-background);
+      text-shadow: none;
+  }
+} 
+
+.main__card-image {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+.main__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  border: solid 2px var(--color-accent);  
+}
+
+.main__card-buttons-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.card__icon-button {
+  background: transparent;
+  padding: 4px 3px 0;
+  outline: solid 2px transparent;
+  outline-offset: -2px;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: solid 2px var(--color-accent);
+  outline-offset: -2px;
+  transition: outline-color 0.3s ease;
+}
+
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
+.card__like-button {
+  position: relative;
+  background: transparent;
+  padding: 6px 35px;
+  border: solid 2px var(--color-accent);
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+  color: var(--color-button-text);
+  font-family: var(--font-accent), sans-serif;
+  font-size: var(--fontSize-accent-text);
+  line-height: 0.9;
+}
+
+.main__save-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 50px auto 100px;
+  inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  padding: 15px;
+  gap: 10px;
+  background-color: var(--color-background);
+  border: solid 2px var(--color-accent);
+}
+
+.floppy-icon {
+  max-inline-size: 21px;
+  block-size: auto;
+  color: var(--color-button-text);
+  mix-blend-mode: difference;
+  z-index: 1;
+}
+
+.main__button::after {
+  content: "";
+  position: absolute;
+  inline-size: 100%;
+  block-size: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--color-accent);
+  transform: scaleX(0);
+}
+
+.main__button:hover::after {
+  cursor: pointer;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.main__button:focus-visible {
+  outline: none;
+  border: solid 2px var(--color-accent);
+  box-shadow: 2px 2px var(--color-accent);
+  transition: box-shadow 0.3s ease;
+}
 

@@ -48,38 +48,64 @@
 
     </header>
 
-    <main>
+    <main class="main__content">
       <article class="main__card">
         <h2 class="main__card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="main__card-photo">
-          <p class="main__photo-watermark">&lt;/html&gt;</p>
-          <img src="./images/image.png" alt="Грузовичок с мороженным" class="main__card-image">          
+          <p class="main__card-watermark">&lt;/html&gt;</p>
+          <img 
+            src="./images/image.png" 
+            alt="Грузовичок с мороженным" 
+            class="main__card-image">          
         </div>
-        <p class="main__card-text">
-          Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
-        </p>
-        <p class="main__card-memories">
-          Место для ваших воспоминаний о начале обучения.
-        </p>
-        <div class="main__card-buttons-group">
-          <button class="card__icon-button">
-            <svg 
-              fill="currentColor" 
-              stroke="currentColor"
-              width="27"
-              height="24" 
-              viewBox="0 0 27 24" 
-              xmlns="http://www.w3.org/2000/svg" 
-              class="like-icon"
-            >
-              <use href="./svg/heart.svg#heart"></use>
-            </svg>
-          </button>
-          <button class="card__like-button">
-            <span class="button-text">Like</span>
-          </button>
+        <div class="main__card-content">
+          <p class="main__card-text">
+            Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
+          </p>
+          <p class="main__card-memories">
+            Место для ваших воспоминаний о начале обучения.
+          </p>        
+          <div class="main__card-buttons-group">
+            <button class="card__icon-button">
+              <svg 
+                fill="currentColor" 
+                stroke="none"
+                width="39"
+                height="36" 
+                viewBox="0 0 39 36" 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="like-icon"
+              >
+                <g class="heart">
+                  <path class="contour" d="M12 6H9v3h3V6Zm3 0h-3v3h3V6ZM9 9H6v3h3V9Zm0 3H6v3h3v-3Zm0 3H6v3h3v-3Zm9-9h-3v3h3V6Zm-6 12H9v3h3v-3Zm3 3h-3v3h3v-3Zm3 3h-3v3h3v-3Zm9-18h3v3h-3V6Zm-3 0h3v3h-3V6Zm6 3h3v3h-3V9Zm0 3h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-9-9h3v3h-3V6Zm6 12h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm-3 3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0-18h-3v3h3V9Z" fill="var(--color-contour)"/>
+      
+                  <path class="main-body" d="M12 9H9v3h3V9Zm3 3h-3v3h3v-3Zm3-3h-3v3h3V9Zm-6 6H9v3h3v-3Zm3 0h-3v3h3v-3Zm0 3h-3v3h3v-3Zm3-6h-3v3h3v-3Zm0 9h-3v3h3v-3Zm0-3h-3v3h3v-3Zm9-9h3v3h-3V9Zm-3 0h3v3h-3V9Zm3 3h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm-3-3h3v3h-3V9Zm6 6h3v3h-3v-3Zm-3 0h3v3h-3v-3Zm0 3h3v3h-3v-3Zm-3-6h3v3h-3v-3Zm0 9h3v3h-3v-3Zm0-3h3v3h-3v-3Zm0 3h-3v3h3v-3Zm0 3h-3v3h3v-3Z" fill="none"/>
+      
+                  <path class="core" d="M18 15h-3v3h3v-3Zm3 0h3v3h-3v-3Zm0 0h-3v3h3v-3Zm0-3h-3v3h3v-3Zm0 6h-3v3h3v-3Z" fill="none"/>
+                </g>      
+                <path class="sparks" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" fill="var(--color-sparks)"/>
+              </svg>
+            </button>
+            <button class="card__like-button main__button">
+              <span class="button-text">Like</span>
+            </button>
+          </div>
         </div>
       </article>
+      <button class="main__save-button main__button">
+        <svg 
+        fill="currentColor" 
+        stroke="currentColor"
+        width="39"
+        height="39" 
+        viewBox="0 0 39 39" 
+        xmlns="http://www.w3.org/2000/svg" 
+        class="floppy-icon"
+        >
+        <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <span class="button-text">Сохранить на память</span>
+      </button>
     </main>
 
     <script src="./scripts/like.js"></script>
