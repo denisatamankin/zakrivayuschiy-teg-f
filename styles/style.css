@@ -31,6 +31,50 @@
   background-attachment: fixed;   
 }
 
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  inline-size: 353px;
+  block-size: 191px;
+  padding: 30px;
+  gap: 30px;
+  background-color: var(--color-background);
+  border: solid 2px var(--color-accent);
+  overflow: hidden;
+}
+
+.dialog::backdrop {
+  background-color: var(--color-accent);
+  opacity: 0.75;
+}
+
+.dialog__content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.dialog__floppy {
+  min-inline-size: 39px;
+  block-size: auto;
+  color: var(--color-accent);
+}
+
+.dialog__title {
+  font-family: var(--font-accent), sans-serif;
+  font-size: var(--fontSize-accent-text);
+  line-height: 150%;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.dialog__button {
+  position: relative;
+  background: transparent;
+  padding: 7px 131px;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -220,10 +264,7 @@
 }
 
 .card__like-button {
-  position: relative;
-  background: transparent;
   padding: 6px 35px;
-  border: solid 2px var(--color-accent);
 }
 
 .button-text {
@@ -241,13 +282,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  position: relative;
   margin: 50px auto 100px;
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   padding: 15px;
   gap: 10px;
-  background-color: var(--color-background);
-  border: solid 2px var(--color-accent);
 }
 
 .floppy-icon {
@@ -256,6 +294,16 @@
   color: var(--color-button-text);
   mix-blend-mode: difference;
   z-index: 1;
+}
+
+.main__button {
+  position: relative;
+  background-color: var(--color-background);
+  border: solid 2px var(--color-accent);
+}
+
+.main__button:hover {
+  cursor: pointer;
 }
 
 .main__button::after {

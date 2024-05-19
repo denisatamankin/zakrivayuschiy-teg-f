@@ -12,11 +12,36 @@
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
-    <!-- <link rel="icon" href="./images/favicon.ico" sizes="any">    
-    <link rel="apple-touch-icon" href="./images/favicon.png"> -->
+    <link rel="icon" href="./images/favicon.ico" sizes="any">    
+    <link rel="apple-touch-icon" href="./images/favicon.png">
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
+
+    <dialog id="dialog" class="dialog">
+      <div class="dialog__content">
+        <svg 
+        fill="currentColor" 
+        stroke="currentColor"
+        width="39"
+        height="39" 
+        viewBox="0 0 39 39" 
+        xmlns="http://www.w3.org/2000/svg" 
+        class="dialog__floppy">
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <h2 class="dialog__title">Вставьте дискету, чтобы продолжить</h2>
+      </div>
+      <form>
+        <button 
+          class="dialog__button main__button" 
+          type="button" 
+          onclick="window['dialog'].close()">
+            <span class="button-text">OK</span>
+        </button>
+      </form>
+    </dialog>
+
     <header class="header">
       <h1 class="header__title">&lt;/html&gt;</h1>
       <p class="header__subtitle">закрывающий тег</p>
@@ -48,7 +73,7 @@
 
     </header>
 
-    <main class="main__content">
+    <main class="main__content">      
       <article class="main__card">
         <h2 class="main__card-title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="main__card-photo">
@@ -92,18 +117,20 @@
           </div>
         </div>
       </article>
-      <button class="main__save-button main__button">
-        <svg 
-        fill="currentColor" 
-        stroke="currentColor"
-        width="39"
-        height="39" 
-        viewBox="0 0 39 39" 
-        xmlns="http://www.w3.org/2000/svg" 
-        class="floppy-icon"
-        >
-        <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
+      <button 
+        class="main__save-button main__button"
+        type="button"
+        onclick="window['dialog'].showModal()">
+          <svg 
+            fill="currentColor" 
+            stroke="currentColor"
+            width="39"
+            height="39" 
+            viewBox="0 0 39 39" 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="floppy-icon">
+              <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
         <span class="button-text">Сохранить на память</span>
       </button>
     </main>
