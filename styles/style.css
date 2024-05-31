@@ -199,7 +199,6 @@
   opacity: 50%;
   font-family: var(--font-accent), sans-serif;
   font-size: var(--fontSize-accent-text);
-  text-transform: uppercase;
   color: var(--color-accent);
   text-shadow:
     -1px 0 var(--color-background), 
@@ -222,6 +221,34 @@
   block-size: 100%;
   object-position: center;
   object-fit: cover;
+}
+
+.main__card-image-saturatemin {
+  filter: saturate(20%);
+}
+
+.main__card-image-saturatemax {
+  filter: saturate(400%);
+}
+
+.main__card-image-hue {
+  filter: hue-rotate(30deg);
+}
+
+.main__card-image-invert {
+  filter: invert(90%);
+}
+
+.main__card-image-sepia {
+  filter: sepia(0.9);
+}
+
+.main__card-image-blur {
+  filter: blur(15px);
+}
+
+.main__card-image-contrast {
+  filter: hue-rotate(80deg) contrast(50%);
 }
 
 .main__card-content {
