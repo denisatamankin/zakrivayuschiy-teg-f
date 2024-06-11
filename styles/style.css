@@ -22,79 +22,32 @@
   align-items: center;
   margin-block-start: 100px;
   font-family: var(--font-main), sans-serif;
-  font-size: var(--fontSize-main-text);
-  font-variation-settings: "wght" var(--fontWeight-main-text);
-  color: var(--color-accent);
-  background-color: var(--color-background);
-  background-image: var(--gradient-background);
-  background-size: cover;
-  background-attachment: fixed;   
-}
-
-.dialog[open] {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  inline-size: 353px;
-  block-size: 191px;
-  padding: 30px;
-  gap: 30px;
-  background-color: var(--color-background);
-  border: solid 2px var(--color-accent);
-  overflow: hidden;
-}
-
-.dialog::backdrop {
-  background-color: var(--color-accent);
-  opacity: 0.75;
-}
-
-.dialog__content {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.dialog__floppy {
-  min-inline-size: 39px;
-  block-size: auto;
-  color: var(--color-accent);
-}
-
-.dialog__title {
-  font-family: var(--font-accent), sans-serif;
-  font-size: var(--fontSize-accent-text);
-  line-height: 150%;
-  text-transform: uppercase;
-  color: var(--color-accent);
-}
-
-.dialog__button {
-  position: relative;
-  background: transparent;
-  padding: 7px 131px;
+  font-size: var(--fontSize-main-text, 18px);
+  font-variation-settings: "wght" var(--fontWeight-main-text, 400);
+  color: var(--color-accent, #000);
+  background:  var(--gradient-background, repeating-linear-gradient(to right,#d3d3d3 0 2px, transparent 2px 4px), repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px), linear-gradient(#e7e7e7 0 0,01%, #e7e7e7, #1a1a1a)) var(--color-background, #fff) center / cover fixed;   
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color-background);
-  inline-size: var(--inlineSize-main);
+  background-color: var(--color-background, #fff);
+  inline-size: var(--inlineSize-main, clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem));
   max-inline-size: 700px;
   font-family: var(--font-accent), fantasy;
-  border: solid 2px var(--color-accent);
+  border: solid 2px var(--color-accent, #000);
 }
 
-.header__title {
+.header__logo {
   margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  font-size: var(--fontSize-title);
+  font-size: var(--fontSize-title, clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
   text-transform: uppercase; 
 }
 
-.header__subtitle {
+.header__title {
   margin-block-start: 20px;
-  font-size: var(--fontSize-subtitle);
+  font-size: var(--fontSize-subtitle, clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
   text-transform: uppercase; 
 }
 
@@ -113,7 +66,7 @@
   background-color: transparent;
   border: none;
   font-family: inherit;
-  font-size: var(--fontSize-accent-text);
+  font-size: var(--fontSize-accent-text, 14px);
   text-transform: uppercase;
 }
 
@@ -158,6 +111,7 @@
   content: '';
   position: absolute;
   display: block;
+  top: 15px;
   inline-size: 100%;
   block-size: 2px;
   background-color: currentColor;
@@ -177,9 +131,9 @@
 
 .main__card {
   margin-block-start: 50px;
-  inline-size: var(--inlineSize-main);
+  inline-size: var(--inlineSize-main, clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem));
   max-inline-size: 700px;
-  background-color: var(--color-background);
+  background-color: var(--color-background, #fff);
 }
 
 .main__card:first-child {
@@ -188,20 +142,21 @@
 
 .main__card-title {
   padding: 5px 5px 5px 10px;
-  font-size: var(--fontSize-main-text);
-  font-variation-settings: "wght" var(--fontWeight-title);
-  line-height: var(--lineHeight-text);
-  border: solid 2px var(--color-accent);
+  font-size: var(--fontSize-main-text, 18px);
+  font-variation-settings: "wght" var(--fontWeight-title, 700);
+  line-height: var(--lineHeight-text, 21px);
+  border: solid 2px var(--color-accent, #000);
   border-block-end: none;
 }
 
 .main__card-text,
 .main__card-memories {
-  line-height: var(--lineHeight-text);
+  line-height: var(--lineHeight-text, 21px);
 }
 
 .main__card-photo {
   position: relative;
+  border: 2px solid var(--color-accent, #000);
 }
 
 .main__card-watermark {
@@ -210,20 +165,20 @@
   inset-block-start: 25px;
   mix-blend-mode: hard-light;
   opacity: 50%;
-  font-family: var(--font-accent), sans-serif;
-  font-size: var(--fontSize-accent-text);
-  color: var(--color-accent);
+  font-family: var(--font-accent), fantasy;
+  font-size: var(--fontSize-accent-text, 14px);
+  color: var(--color-accent, #000);
   text-shadow:
-    -1px 0 var(--color-background), 
-    0 1px var(--color-background), 
-    1px 0 var(--color-background), 
-    0 -1px var(--color-background);
+    -1px 0 var(--color-background, #fff), 
+    0 1px var(--color-background, #fff), 
+    1px 0 var(--color-background, #fff), 
+    0 -1px var(--color-background, #fff);
 }
 
-@supports((text-stroke: 1px var(--color-background)) or (-webkit-text-stroke: 1px var(--color-background))) {
+@supports((text-stroke: 1px var(--color-background, #fff)) or (-webkit-text-stroke: 1px var(--color-background, #fff))) {
   .main__card-watermark {
-      -webkit-text-stroke: 1px var(--color-background);
-      text-stroke: 1px var(--color-background);
+      -webkit-text-stroke: 1px var(--color-background, #fff);
+      text-stroke: 1px var(--color-background, #fff);
       text-shadow: none;
   }
 } 
@@ -270,7 +225,7 @@
   gap: 25px;
   padding: 25px;
   padding-block-end: 21px;
-  border: solid 2px var(--color-accent);
+  border: solid 2px var(--color-accent, #000);
   border-block-start: none;  
 }
 
@@ -285,6 +240,7 @@
   padding: 4px 3px 0;
   outline: solid 2px transparent;
   outline-offset: -2px;
+  transition: outline-color 0.3s ease;
 }
 
 .sparks {
@@ -296,9 +252,8 @@
 }
 
 .card__icon-button:focus-visible {
-  outline: solid 2px var(--color-accent);
+  outline: solid 2px var(--color-accent, #000);
   outline-offset: -2px;
-  transition: outline-color 0.3s ease;
 }
 
 .card__icon-button:hover {
@@ -315,9 +270,9 @@
   position: relative;
   z-index: 2;
   mix-blend-mode: difference;
-  color: var(--color-button-text);
-  font-family: var(--font-accent), sans-serif;
-  font-size: var(--fontSize-accent-text);
+  color: var(--color-button-text, #fff);
+  font-family: var(--font-accent), fantasy;
+  font-size: var(--fontSize-accent-text, 14px);
   line-height: 0.9;
 }
 
@@ -335,7 +290,7 @@
 .floppy-icon {
   max-inline-size: 28px;
   block-size: auto;
-  color: var(--color-button-text);
+  color: var(--color-button-text, #fff);
   mix-blend-mode: difference;
   z-index: 1;
 }
@@ -348,13 +303,22 @@
 
 .main__button {
   position: relative;
-  background-color: var(--color-background);
-  border: solid 2px var(--color-accent);
+  background-color: var(--color-background, #fff);
+  border: solid 2px var(--color-accent, #000);
+  box-shadow: none;
+  transition: box-shadow 0.3s ease;
 }
 
 .main__button:hover {
   cursor: pointer;
 }
+
+.main__button:focus-visible {
+  outline: none;
+  border: solid 2px var(--color-accent, #000);
+  box-shadow: 2px 2px var(--color-accent, #000);
+}
+
 
 .main__button::after {
   content: "";
@@ -363,21 +327,58 @@
   block-size: 100%;
   left: 0;
   top: 0;
-  background-color: var(--color-accent);
+  background-color: var(--color-accent, #000);
   transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
 }
 
 .main__button:hover::after {
   cursor: pointer;
   transform: scaleX(1);
   transform-origin: left;
-  transition: transform 0.5s ease-in-out;
 }
 
-.main__button:focus-visible {
-  outline: none;
-  border: solid 2px var(--color-accent);
-  box-shadow: 2px 2px var(--color-accent);
-  transition: box-shadow 0.3s ease;
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  inline-size: 353px;
+  block-size: 191px;
+  padding: 27px;
+  gap: 30px;
+  background-color: var(--color-background, #fff);
+  border: solid 2px var(--color-accent, #000);
 }
 
+.dialog::backdrop {
+  background-color: var(--color-backdrop, #000);
+  opacity: 0.75;
+}
+
+.dialog__content {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.dialog__floppy {
+  min-inline-size: 39px;
+  block-size: auto;
+  color: var(--color-accent, #000);
+}
+
+.dialog__title {
+  font-family: var(--font-accent), fantasy;
+  font-size: var(--fontSize-accent-text, 14px);
+  line-height: 150%;
+  text-transform: uppercase;
+  color: var(--color-accent, #000);
+}
+
+.dialog__button {
+  position: relative;
+  background: transparent;
+  padding: 7px 131px;
+}

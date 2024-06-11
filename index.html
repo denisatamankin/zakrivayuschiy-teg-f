@@ -18,38 +18,18 @@
   </head>
   <body class="page">
 
-    <dialog id="dialog" class="dialog">
-      <div class="dialog__content">
-        <svg 
-        fill="currentColor" 
-        stroke="currentColor"
-        width="39"
-        height="39" 
-        viewBox="0 0 39 39" 
-        xmlns="http://www.w3.org/2000/svg" 
-        class="dialog__floppy">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <h2 class="dialog__title">Вставьте дискету, чтобы продолжить</h2>
-      </div>
-      <form>
-        <button 
-          class="dialog__button main__button" 
-          type="button" 
-          onclick="window['dialog'].close()">
-            <span class="button-text">OK</span>
-        </button>
-      </form>
-    </dialog>
-
     <header class="header">
-      <h1 class="header__title">&lt;/html&gt;</h1>
-      <p class="header__subtitle">закрывающий тег</p>
+      <a class="header__logo">&lt;/html&gt;</a>
+      <h1 class="header__title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
           <li class="theme-menu__item">
-            <button type="button" data-theme="dark" class="theme-menu__button">
+            <button 
+              type="button" 
+              data-theme="dark" 
+              class="theme-menu__button"
+            >
               Темно
             </button>
           </li>
@@ -64,7 +44,11 @@
             </button>
           </li>
           <li class="theme-menu__item">
-            <button type="button" data-theme="light" class="theme-menu__button">
+            <button 
+              type="button" 
+              data-theme="light" 
+              class="theme-menu__button"
+            >
               Светло
             </button>
           </li>
@@ -76,10 +60,10 @@
     <main class="main__content">      
       <article class="main__card">
         <h2 class="main__card-title">
-          Фритрек и нулевой спринт: Подготовка к работе
+          Фритрек и&nbsp;нулевой спринт: Подготовка к&nbsp;работе
         </h2>
         <div class="main__card-photo">
-          <p class="main__card-watermark">&lt;/HTML&gt;</p>
+          <span class="main__card-watermark">&lt;/HTML&gt;</span>
           <img 
             src="./images/image.png" 
             alt="Грузовичок с мороженным" 
@@ -87,13 +71,13 @@
         </div>
         <div class="main__card-content">
           <p class="main__card-text">
-            Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее.
+            Это было самое начало пути. На&nbsp;этом этапе важно было проникнуться основами и&nbsp;настроиться на&nbsp;учёбу. И, возможно, подумать, как новые знания могут повлиять на&nbsp;ваше будущее.
           </p>
           <p class="main__card-memories">
-            Место для ваших воспоминаний о начале обучения.
+            Место для ваших воспоминаний о&nbsp;начале обучения.
           </p>        
           <div class="main__card-buttons-group">
-            <button class="card__icon-button">
+            <button type="button" class="card__icon-button">
               <svg 
                 fill="currentColor" 
                 stroke="none"
@@ -113,7 +97,7 @@
                 <path class="sparks" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" fill="var(--color-sparks)"/>
               </svg>
             </button>
-            <button class="card__like-button main__button">
+            <button type="button" class="card__like-button main__button">
               <span class="button-text">Like</span>
             </button>
           </div>
@@ -122,10 +106,10 @@
 
       <article class="main__card">
         <h2 class="main__card-title">
-          1 спринт: Я — чистый лист
+          1 спринт: Я&nbsp;&mdash; чистый лист
         </h2>
         <div class="main__card-photo">
-          <p class="main__card-watermark">&lt;/HTML&gt;</p>
+          <span class="main__card-watermark">&lt;/HTML&gt;</span>
           <img 
             src="./images/image.png" 
             alt="Грузовичок с мороженным" 
@@ -133,12 +117,13 @@
         </div>
         <div class="main__card-content">
           <p class="main__card-text">
-            На первых этапах мы работали со страхами и сомнениями, которые часто испытывают новички. Один из них — страх перед чистым листом. Это, конечно же, намного сложнее, чем боязнь куска бумаги. Часто за этим ощущением скрываются более глубокие вопросы: с чего начать? а вдруг будет слишком сложно? что, если я не справлюсь?          </p>
+            На&nbsp;первых этапах мы&nbsp;работали со&nbsp;страхами и&nbsp;сомнениями, которые часто испытывают новички. Один из&nbsp;них&nbsp;&mdash; страх перед чистым листом. Это, конечно&nbsp;же, намного сложнее, чем боязнь куска бумаги. Часто за&nbsp;этим ощущением скрываются более глубокие вопросы: с&nbsp;чего начать? а&nbsp;вдруг будет слишком сложно? что, если я&nbsp;не&nbsp;справлюсь?
+          </p>
           <p class="main__card-memories">
-            Место для ваших воспоминаний о начале обучения.
+            Место для ваших воспоминаний о&nbsp;начале обучения.
           </p>        
           <div class="main__card-buttons-group">
-            <button class="card__icon-button">
+            <button type="button" class="card__icon-button">
               <svg 
                 fill="currentColor" 
                 stroke="none"
@@ -158,7 +143,7 @@
                 <path class="sparks" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" fill="var(--color-sparks)"/>
               </svg>
             </button>
-            <button class="card__like-button main__button">
+            <button type="button" class="card__like-button main__button">
               <span class="button-text">Like</span>
             </button>
           </div>
@@ -167,10 +152,10 @@
 
       <article class="main__card">
         <h2 class="main__card-title">
-          1 спринт: А если не получится?
+          1 спринт: А&nbsp;если не&nbsp;получится?
         </h2>
         <div class="main__card-photo">
-          <p class="main__card-watermark">&lt;CSS&gt;</p>
+          <span class="main__card-watermark">&lt;CSS&gt;</span>
           <img 
             src="./images/image.png" 
             alt="Грузовичок с мороженным" 
@@ -178,12 +163,13 @@
         </div>
         <div class="main__card-content">
           <p class="main__card-text">
-            Первый проект — позади! Но это всё ещё самое начало пути. Радость могла быстро померкнуть и смениться ожиданием провала. Или вы, наоборот, могли вдохновиться успехами и поверить в себя.          </p>
+            Первый проект&nbsp;&mdash; позади! Но&nbsp;это всё ещё самое начало пути. Радость могла быстро померкнуть и&nbsp;смениться ожиданием провала. Или вы, наоборот, могли вдохновиться успехами и&nbsp;поверить в&nbsp;себя.
+          </p>
           <p class="main__card-memories">
-            Место для ваших воспоминаний о начале обучения.
+            Место для ваших воспоминаний о&nbsp;начале обучения.
           </p>        
           <div class="main__card-buttons-group">
-            <button class="card__icon-button">
+            <button type="button" class="card__icon-button">
               <svg 
                 fill="currentColor" 
                 stroke="none"
@@ -203,7 +189,7 @@
                 <path class="sparks" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" fill="var(--color-sparks)"/>
               </svg>
             </button>
-            <button class="card__like-button main__button">
+            <button type="button" class="card__like-button main__button">
               <span class="button-text">Like</span>
             </button>
           </div>
@@ -212,10 +198,10 @@
 
       <article class="main__card">
         <h2 class="main__card-title">
-          2 спринт: Погоня за идеалом
+          2 спринт: Погоня за&nbsp;идеалом
         </h2>
         <div class="main__card-photo">
-          <p class="main__card-watermark">&lt;desigions&gt;</p>
+          <span class="main__card-watermark">&lt;desigions&gt;</span>
           <img 
             src="./images/image.png" 
             alt="Грузовичок с мороженным" 
@@ -223,12 +209,13 @@
         </div>
         <div class="main__card-content">
           <p class="main__card-text">
-            На этом этапе вы уже достаточно разбирались в основах вёрстки, чтобы понять, как много ещё впереди. Вы могли попытаться погнаться за идеалом и понять, что он недостижим. А, может, вы вовсе и не подвержены перфекционизму и вместо того, чтобы сделать идеально, старались просто сделать.          </p>
+            На&nbsp;этом этапе вы&nbsp;уже достаточно разбирались в&nbsp;основах вёрстки, чтобы понять, как много ещё впереди. Вы&nbsp;могли попытаться погнаться за&nbsp;идеалом и&nbsp;понять, что он&nbsp;недостижим. А, может, вы&nbsp;вовсе и&nbsp;не&nbsp;подвержены перфекционизму и&nbsp;вместо того, чтобы сделать идеально, старались просто сделать.
+          </p>
           <p class="main__card-memories">
-            Место для ваших воспоминаний о начале обучения.
+            Место для ваших воспоминаний о&nbsp;начале обучения.
           </p>        
           <div class="main__card-buttons-group">
-            <button class="card__icon-button">
+            <button type="button" class="card__icon-button">
               <svg 
                 fill="currentColor" 
                 stroke="none"
@@ -248,7 +235,7 @@
                 <path class="sparks" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" fill="var(--color-sparks)"/>
               </svg>
             </button>
-            <button class="card__like-button main__button">
+            <button type="button" class="card__like-button main__button">
               <span class="button-text">Like</span>
             </button>
           </div>
@@ -257,10 +244,10 @@
 
       <article class="main__card">
         <h2 class="main__card-title">
-          2 спринт: О тех, кто рядом
+          2 спринт: О&nbsp;тех, кто рядом
         </h2>
         <div class="main__card-photo">
-          <p class="main__card-watermark">&lt;care&gt;</p>
+          <span class="main__card-watermark">&lt;care&gt;</span>
           <img 
             src="./images/image.png" 
             alt="Грузовичок с мороженным" 
@@ -268,12 +255,13 @@
         </div>
         <div class="main__card-content">
           <p class="main__card-text">
-            Всё это время вы были не одиноки (хотя, возможно, иногда и чувствовали, что одни против целого мира). Вас окружали одногруппники, команда сопровождения и просто близкие люди, которым можно пожаловаться, если очередной макет просто так не поддавался. Осваивать что-то новое легче, когда рядом есть единомышленники, не правда ли?          </p>
+            Всё это время вы&nbsp;были не&nbsp;одиноки (хотя, возможно, иногда и&nbsp;чувствовали, что одни против целого мира). Вас окружали одногруппники, команда сопровождения и&nbsp;просто близкие люди, которым можно пожаловаться, если очередной макет просто так не&nbsp;поддавался. Осваивать <nobr>что-то</nobr> новое легче, когда рядом есть единомышленники, не&nbsp;правда&nbsp;ли?
+          </p>
           <p class="main__card-memories">
-            Место для ваших воспоминаний о начале обучения.
+            Место для ваших воспоминаний о&nbsp;начале обучения.
           </p>        
           <div class="main__card-buttons-group">
-            <button class="card__icon-button">
+            <button type="button" class="card__icon-button">
               <svg 
                 fill="currentColor" 
                 stroke="none"
@@ -293,7 +281,7 @@
                 <path class="sparks" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" fill="var(--color-sparks)"/>
               </svg>
             </button>
-            <button class="card__like-button main__button">
+            <button type="button" class="card__like-button main__button">
               <span class="button-text">Like</span>
             </button>
           </div>
@@ -305,7 +293,7 @@
           3 спринт: Обходные стратегии
         </h2>
         <div class="main__card-photo">
-          <p class="main__card-watermark">&lt;support&gt;</p>
+          <span class="main__card-watermark">&lt;support&gt;</span>
           <img 
             src="./images/image.png" 
             alt="Грузовичок с мороженным" 
@@ -313,12 +301,13 @@
         </div>
         <div class="main__card-content">
           <p class="main__card-text">
-            На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться, что решения просто иссякли. Значит, пришло время посмотреть на задачу под другим углом.          </p>
+            На&nbsp;этом курсе вы&nbsp;постоянно решали разные задачи. В&nbsp;<nobr>какой-то</nobr> момент вам могло показаться, что решения просто иссякли. Значит, пришло время посмотреть на&nbsp;задачу под другим углом.
+          </p>
           <p class="main__card-memories">
-            Место для ваших воспоминаний о начале обучения.
+            Место для ваших воспоминаний о&nbsp;начале обучения.
           </p>        
           <div class="main__card-buttons-group">
-            <button class="card__icon-button">
+            <button type="button" class="card__icon-button">
               <svg 
                 fill="currentColor" 
                 stroke="none"
@@ -338,7 +327,7 @@
                 <path class="sparks" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" fill="var(--color-sparks)"/>
               </svg>
             </button>
-            <button class="card__like-button main__button">
+            <button type="button" class="card__like-button main__button">
               <span class="button-text">Like</span>
             </button>
           </div>
@@ -350,7 +339,7 @@
           3 спринт: Когда опускаются руки
         </h2>
         <div class="main__card-photo">
-          <p class="main__card-watermark">&lt;lifes-style: none;&gt;</p>
+          <span class="main__card-watermark">&lt;lifes-style: none;&gt;</span>
           <img 
             src="./images/image.png" 
             alt="Грузовичок с мороженным" 
@@ -358,12 +347,13 @@
         </div>
         <div class="main__card-content">
           <p class="main__card-text">
-            Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и проектную пора сдавать, и задачи хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В такие моменты очень нужна концентрация. Вспомните, откуда вы её черпали.          </p>
+            Во&nbsp;время учёбы часто возникает чувство, когда не&nbsp;знаешь, за&nbsp;что хвататься. Вроде и&nbsp;проектную пора сдавать, и&nbsp;задачи хочется порешать, и&nbsp;в&nbsp;теории получше разобраться, и&nbsp;жизнь не&nbsp;забыть пожить. В&nbsp;такие моменты очень нужна концентрация. Вспомните, откуда вы&nbsp;её черпали.
+          </p>
           <p class="main__card-memories">
-            Место для ваших воспоминаний о начале обучения.
+            Место для ваших воспоминаний о&nbsp;начале обучения.
           </p>        
           <div class="main__card-buttons-group">
-            <button class="card__icon-button">
+            <button type="button" class="card__icon-button">
               <svg 
                 fill="currentColor" 
                 stroke="none"
@@ -383,7 +373,7 @@
                 <path class="sparks" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" fill="var(--color-sparks)"/>
               </svg>
             </button>
-            <button class="card__like-button main__button">
+            <button type="button" class="card__like-button main__button">
               <span class="button-text">Like</span>
             </button>
           </div>
@@ -395,7 +385,7 @@
           «Сейчас я здесь»
         </h2>
         <div class="main__card-photo">
-          <p class="main__card-watermark">&lt;experience&gt;</p>
+          <span class="main__card-watermark">&lt;experience&gt;</span>
           <img 
             src="./images/image.png" 
             alt="Грузовичок с мороженным" 
@@ -403,11 +393,13 @@
         </div>
         <div class="main__card-content">
           <p class="main__card-text">
-            Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания. Ведь часто путь — и есть результат.          </p>
+            Сейчас вы&nbsp;уже очень много знаете о&nbsp;вёрстке. Но&nbsp;это только начало. <nobr>Во-первых</nobr>, впереди ещё много материала про &laquo;красотищу&raquo;. <nobr>Во-вторых</nobr>, с&nbsp;окончанием курса учёба не&nbsp;заканчивается. Вёрстка&nbsp;&mdash; это целый мир. И&nbsp;этот мир постоянно меняется. Познать его полностью не&nbsp;получится, но&nbsp;это тот случай, когда важен сам процесс познания. Ведь часто путь&nbsp;&mdash; и&nbsp;есть результат.
+          </p>
           <p class="main__card-memories">
-            Место, чтобы остановиться, подумать и написать, что вы чувствуете в этой точке пути.          </p>        
+            Место, чтобы остановиться, подумать и&nbsp;написать, что вы&nbsp;чувствуете в&nbsp;этой точке пути.
+          </p>        
           <div class="main__card-buttons-group">
-            <button class="card__icon-button">
+            <button type="button" class="card__icon-button">
               <svg 
                 fill="currentColor" 
                 stroke="none"
@@ -427,7 +419,7 @@
                 <path class="sparks" d="M36 13h3v3h-3v-3Zm-9 14h3v3h-3v-3Zm-9 6h3v3h-3v-3Zm-9-6h3v3H9v-3ZM24 0h3v3h-3V0Zm9 3h3v3h-3V3ZM3 3h3v3H3V3Zm9-3h3v3h-3V0ZM0 13h3v3H0v-3Z" fill="var(--color-sparks)"/>
               </svg>
             </button>
-            <button class="card__like-button main__button">
+            <button type="button" class="card__like-button main__button">
               <span class="button-text">Like</span>
             </button>
           </div>
@@ -448,9 +440,32 @@
             class="floppy-icon">
               <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-        <span class="button-text">Сохранить на память</span>
+        <span class="button-text">Сохранить на&nbsp;память</span>
       </button>
     </main>
+
+    <dialog id="dialog" class="dialog">
+      <div class="dialog__content">
+        <svg 
+        fill="currentColor" 
+        stroke="currentColor"
+        width="39"
+        height="39" 
+        viewBox="0 0 39 39" 
+        xmlns="http://www.w3.org/2000/svg" 
+        class="dialog__floppy">
+          <use href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <h2 class="dialog__title">Вставьте дискету, чтобы продолжить</h2>
+      </div>
+      <form method="dialog">
+        <button 
+          class="dialog__button main__button" 
+          type="submit">
+            <span class="button-text">OK</span>
+        </button>
+      </form>
+    </dialog>
 
     <script src="./scripts/like.js"></script>
   </body>
